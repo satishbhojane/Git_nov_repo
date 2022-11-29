@@ -1,50 +1,94 @@
-my name is satish bhojane	
-my name is satish bhojane	
+/*Queue using Array*/
+#include <stdio.h>
+#define M 5
+int que[M];
+ int front=0,rear =0;
+   
+ void insertQ(int);
+ int deleteQ();
+ void displayQ();
+ 
+ int main()
+ {
+ 	int ch,data;
+ 	do{
+ 		printf("\n\n\t\t****MENU*****");
+ 		printf("\n\n\t#1 Insert Q");
+ 		printf("\n\n\t#2 Delete Q");
+ 		printf("\n\n\t#3 Display Q");
+ 		printf("\n\n\t#4 Exit Q");
+        printf("\n\n\tEnter your choice");
+        scanf("%d",&ch);
+     	switch(ch)
+              		{
+              		case 1:
+					  printf("\n\tEnter the Data:");
+					  scanf("%d",&data);
+					  insertQ(data);
+					  break;
+					  case 2:
+					  data=deleteQ();
+					  if(data!=-1)
+					  {
+					  	printf("\n\tThe popped data is :%d,data");
+					   }
+					  break;
+					  case 3:
+				 	   printf("\n\tList of non in queue");
+				 	   displayQ();
+					   break;
+					   case 4:
+					    printf("\n\tThank You......");
+					    break;
+						default:
+				 		printf("\n\tYou have entered wrong choice....");
+				 	   }
+				 	 } while(ch!=4);
+				 }
+				
+			
+				 /*----------------------------*/
+				void insertQ(int data)
+			{
+				if(rear==M)
+				{
+			    	printf("\n\tQue is full");
+			    	return;
+				}
+				else
+				{
+					que[rear]=data;
+					rear++;
+					
+				}
+			}
+			int deleteQ()	
+			{
+				int d;
+				//0==5
+				if(front==rear)
+				{
+					printf("Que is empty");
+					return-1;
+					
+				}
+				else 
+				{
+					d=que[front];
+					que[front]=0;
+					
+					front++;
+					return d;
+					
+				}
+			 } 
+ /*================================================================*/
+ void displayQ()
+ {
+ 	int i;
+ 	for(i=front;i<rear;i++)
+ 	{
+ 		printf("%d",que[i]);	
+		  }
+ }
 
-
-my name is satish bhojane	
-
-v
-my name is satish bhojane	
-
-my name is satish bhojane	
-
-my name is satish bhojane	
-
-my name is satish bhojane	
-
-my name is satish bhojane	
-
-my name is my my name is satish bhojane	
-name is satish bhojane	
-
-my name is satish bhojane	
-
-v
-my name is satish bhojane	
- name is satish bhojane	
-ish bhojane	
-
-my name is satish bhojane	
-
-my name is satish bhojane	
-
-
-my name is satish bhojane	
-
-my name is satish bhojane	
-
-my name is satish bhojane	
-
-my name is satish bhojane	
-
-my name is satish bhojane	
-my name is satish bhojane	
-
-
-my name is satish bhojane	
-
-v
-my name is satish bhojane	
-
-my name is satish bhojane	
